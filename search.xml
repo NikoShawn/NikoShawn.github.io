@@ -4,9 +4,22 @@
   
     
     <entry>
-      <title>这是一篇新的博文</title>
-      <link href="/2024/07/17/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E6%96%87/"/>
-      <url>/2024/07/17/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E6%96%87/</url>
+      <title>港澳臺大學生内地升學指南</title>
+      <link href="/2024/07/19/%E6%B8%AF%E6%BE%B3%E8%87%BA%E5%A4%A7%E5%AD%B8%E7%94%9F%E5%86%85%E5%9C%B0%E5%8D%87%E5%AD%B8%E6%8C%87%E5%8D%97/"/>
+      <url>/2024/07/19/%E6%B8%AF%E6%BE%B3%E8%87%BA%E5%A4%A7%E5%AD%B8%E7%94%9F%E5%86%85%E5%9C%B0%E5%8D%87%E5%AD%B8%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>北京理工大學校園介紹</title>
+      <link href="/2024/07/19/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%9C%92%E4%BB%8B%E7%B4%B9/"/>
+      <url>/2024/07/19/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%9C%92%E4%BB%8B%E7%B4%B9/</url>
       
         <content type="html"><![CDATA[<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/EOSCXeaUJSo?si=RW-uufWPOLwKoSFl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
       
@@ -20,7 +33,7 @@
       
         <tags>
             
-            <tag> 影片 </tag>
+            <tag> 視頻 </tag>
             
         </tags>
       
@@ -29,13 +42,27 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2024/07/15/hello-world/"/>
-      <url>/2024/07/15/hello-world/</url>
+      <title>Hexo 網站搭建教程</title>
+      <link href="/2024/07/15/Hexo%20%E7%B6%B2%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+      <url>/2024/07/15/Hexo%20%E7%B6%B2%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>伴隨著網絡技術的不斷發展,建立個人網站和博客已經變得前所未有地簡單。Hexo 就是一款出色的靜態網站生成器,它可以幫助您快速搭建屬於自己的網站或博客。</p><p>本教程將詳細介紹如何使用 Hexo 從頭開始搭建一個網站,包括環境準備、Hexo 安裝、網站初始化、本地預覽、撰寫文章、生成靜態文件以及網站部署等步驟。</p><p>無論您是一名開發人員還是一名寫作愛好者,只要按照本教程操作,就能輕鬆擁有一個專屬的在線空間。現在,就讓我們開始這段網站搭建的征程吧!</p><h2 id="前期準備"><a href="#前期準備" class="headerlink" title="前期準備"></a>前期準備</h2><p>在開始之前,您需要在您的電腦上安裝以下工具:</p><ul><li>Node.js</li><li>Git</li></ul><h3 id="安裝-Node-js"><a href="#安裝-Node-js" class="headerlink" title="安裝 Node.js"></a>安裝 Node.js</h3><ol><li>訪問 <a href="https://nodejs.org/en/">Node.js 官網</a></li><li>根據您的操作系統下載最新的 LTS 版本</li><li>運行安裝程序並按照說明操作</li></ol><h3 id="安裝-Git"><a href="#安裝-Git" class="headerlink" title="安裝 Git"></a>安裝 Git</h3><ol><li>訪問 <a href="https://git-scm.com/downloads">Git 官網</a></li><li>根據您的操作系統下載最新版本</li><li>運行安裝程序並按照說明操作</li></ol><h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>打開您的終端(Terminal)或命令提示符(Command Prompt),輸入以下命令以使用 npm 全域安裝 Hexo:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h2 id="建立-Hexo-專案"><a href="#建立-Hexo-專案" class="headerlink" title="建立 Hexo 專案"></a>建立 Hexo 專案</h2><ol><li>創建一個新的資料夾用於存放您的 Hexo 專案:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> &lt;folder-name&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder-name&gt;</span><br></pre></td></tr></table></figure><ol start="2"><li>在資料夾中初始化 Hexo:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><ol start="3"><li>安裝依賴項:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h2><ol><li>啟動本地伺服器:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><ol start="2"><li>在瀏覽器中訪問 <a href="http://localhost:4000/">http://localhost:4000</a> 預覽您的網站</li></ol><h2 id="撰寫文章"><a href="#撰寫文章" class="headerlink" title="撰寫文章"></a>撰寫文章</h2><ol><li>創建一篇新文章:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure><p>其中 layout 是可選的,默認為 post。title 是文章的標題。</p><ol><li>文章會儲存在 source&#x2F;_posts 資料夾中,使用 Markdown 語法編輯它。</li></ol><h2 id="生成靜態文件"><a href="#生成靜態文件" class="headerlink" title="生成靜態文件"></a>生成靜態文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>靜態文件會生成在 public 資料夾中。</p><h2 id="部署網站"><a href="#部署網站" class="headerlink" title="部署網站"></a>部署網站</h2><ol><li>安裝部署插件,比如 <code>hexo-deployer-git</code>:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><ol start="2"><li>在 _config.yml 中配置部署設定,例如:</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br></pre></td></tr></table></figure><ol start="3"><li>部署網站:</li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">deploy</span></span><br></pre></td></tr></table></figure><h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這樣就完成了 Hexo 網站的搭建和部署!您可以繼續探索更多功能和主題來定制您的網站。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 開發文檔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo框架 </tag>
+            
+            <tag> 網站開發 </tag>
+            
+        </tags>
       
     </entry>
     
