@@ -4,143 +4,29 @@
   
     
     <entry>
-      <title>一周五練課表之腿部訓練</title>
-      <link href="/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%85%BF%E9%83%A8%E8%A8%93%E7%B7%B4/"/>
-      <url>/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%85%BF%E9%83%A8%E8%A8%93%E7%B7%B4/</url>
+      <title>卡爾曼濾波器介紹（1）</title>
+      <link href="/2024/08/07/%E5%8D%A1%E7%88%BE%E6%9B%BC%E6%BF%BE%E6%B3%A2%E5%99%A8%E4%BB%8B%E7%B4%B9/"/>
+      <url>/2024/08/07/%E5%8D%A1%E7%88%BE%E6%9B%BC%E6%BF%BE%E6%B3%A2%E5%99%A8%E4%BB%8B%E7%B4%B9/</url>
       
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="第一章-什麼是濾波"><a href="#第一章-什麼是濾波" class="headerlink" title="第一章 什麼是濾波?"></a>第一章 什麼是濾波?</h1><p>濾波是信號處理中的一個基本概念,其目的是從觀測信號中分離出有用的資訊,去除不必要的干擾和噪聲。常見的濾波方法包括:</p><ol><li>平滑濾波器:利用時間域上的相鄰觀測值進行加權平均,減小噪聲影響。如移動平均濾波器。</li><li>頻率域濾波器:利用頻譜特性,保留目標頻帶的信號成分,濾除其他頻帶的干擾。如低通濾波器、高通濾波器。 </li><li>自適應濾波器:能夠自動調整濾波參數,以適應信號特性的變化。如LMS自適應濾波器。</li></ol><p>這些濾波方法都有各自的優缺點,適用於不同的信號處理場景。其中,卡爾曼濾波是一種基於狀態空間模型的優化濾波算法,具有獨特的優勢。</p><h2 id="1-1-濾波的基本原理"><a href="#1-1-濾波的基本原理" class="headerlink" title="1.1 濾波的基本原理"></a>1.1 濾波的基本原理</h2><p>濾波的基本原理是利用信號的統計特性,對原始信號進行變換或處理,從而達到以下目的:</p><ol><li>去除噪聲:從觀測信號中去除各種干擾噪聲,提高信噪比。</li><li>平滑處理:消除信號中的毛刺和尖峰,使信號變化更加平滑連續。</li><li>頻帶選擇:選擇性地保留某些頻帶成分,濾除其他頻帶干擾。</li><li>預測和估計:根據歷史資料預測未來信號走勢,或估計系統狀態變數。</li></ol><h2 id="1-2-常見的濾波方法"><a href="#1-2-常見的濾波方法" class="headerlink" title="1.2 常見的濾波方法"></a>1.2 常見的濾波方法</h2><p>常見的濾波方法主要包括:</p><ol><li><strong>平滑濾波器</strong>:利用時間域上的相鄰觀測值進行加權平均,減小噪聲影響。如移動平均濾波器。</li><li><strong>頻率域濾波器</strong>:利用頻譜特性,保留目標頻帶的信號成分,濾除其他頻帶的干擾。如低通濾波器、高通濾波器。</li><li><strong>自適應濾波器</strong>:能夠自動調整濾波參數,以適應信號特性的變化。如LMS自適應濾波器。</li><li><strong>狀態空間濾波器</strong>:基於系統的狀態空間模型,利用測量值和模型預測值進行最佳化融合,如卡爾曼濾波。</li></ol><p>這些濾波方法都有各自的優缺點,適用於不同的信號處理場景。</p><h2 id="1-3-移動平均濾波器的簡單案例"><a href="#1-3-移動平均濾波器的簡單案例" class="headerlink" title="1.3 移動平均濾波器的簡單案例"></a>1.3 移動平均濾波器的簡單案例</h2><p>假設我們需要精確測量一個金條的重量。由於各種因素的影響,測量值可能會存在一些噪音或波動。為了提高測量的精度和可靠性,我們可以使用濾波器來處理原始測量數據。</p><p>在這個案例中,我們使用了移動平均濾波器(Moving Average Filter)。這種濾波器的原理是對當前測量值及其前後一定數量的值求平均,從而減少了由於測量噪音導致的波動。</p><p>具體實現步驟如下:</p><ol><li>模擬金條的真實重量和測量噪音。</li><li>進行多次測量,獲得原始測量值。</li><li>應用移動平均濾波器,對原始測量值進行平滑處理。</li><li>比較原始測量值和經過濾波的測量值,觀察濾波效果。</li></ol><p>實現代碼如下</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模擬金條重量測量</span></span><br><span class="line">true_weight = <span class="number">100.0</span>  <span class="comment"># 金條的真實重量</span></span><br><span class="line">noise_std = <span class="number">0.1</span>      <span class="comment"># 測量噪音標準差</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 進行10次測量</span></span><br><span class="line">raw_weights = true_weight + np.random.normal(<span class="number">0</span>, noise_std, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 應用移動平均濾波器</span></span><br><span class="line">window_size = <span class="number">3</span></span><br><span class="line">filtered_weights = np.convolve(raw_weights, np.ones(window_size)/window_size, mode=<span class="string">&#x27;valid&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 輸出結果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Raw measurements:&quot;</span>, raw_weights)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Filtered measurements:&quot;</span>, filtered_weights)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;True weight:&quot;</span>, true_weight)</span><br></pre></td></tr></table></figure><p>通過這種方法,可以有效地抑制噪音,得到更加準確的測量結果。這種濾波技術在需要高精度測量的應用場景中很常見,例如精密儀器、工業製造等領域。</p><h1 id="第二章-什麼是貝葉斯濾波"><a href="#第二章-什麼是貝葉斯濾波" class="headerlink" title="第二章 什麼是貝葉斯濾波?"></a>第二章 什麼是貝葉斯濾波?</h1><p>貝葉斯濾波器是一種基於貝葉斯定理的技術，用來估計動態系統的狀態。它特別適合處理不確定性和噪聲，廣泛應用於信號處理、機器學習和機器人導航等領域。</p><h2 id="2-1-基本概念"><a href="#2-1-基本概念" class="headerlink" title="2.1 基本概念"></a>2.1 基本概念</h2><ul><li><p><strong>先驗概率（Prior Probability）</strong><br>初始狀態的估計，是在獲取新數據之前對系統狀態的信念。先驗概率反映了對系統的初步了解。</p></li><li><p><strong>似然函數（Likelihood Function）</strong><br>給定某一狀態，觀察到某項新數據或觀測值的概率。似然函數用來衡量觀測數據與假設狀態之間的匹配程度。</p></li><li><p><strong>後驗概率（Posterior Probability）</strong><br>結合先驗概率和似然函數，更新後得到的系統狀態估計。後驗概率代表在觀測新數據後對系統狀態的最新信念。</p></li></ul><h2 id="2-2-數學推導"><a href="#2-2-數學推導" class="headerlink" title="2.2 數學推導"></a>2.2 數學推導</h2><p>貝葉斯定理的數學表達式為：</p><p>[ P(X|Y) &#x3D; \frac{P(Y|X) \cdot P(X)}{P(Y)} ]</p><p>在貝葉斯濾波器中：</p><ul><li><p><strong>狀態轉移模型</strong><br>預測下一狀態 ( X_t ) 的先驗概率：</p><p>[ P(X_t|Y_{1:t-1}) &#x3D; \int P(X_t|X_{t-1}) \cdot P(X_{t-1}|Y_{1:t-1}) , dX_{t-1} ]</p><p>這表示根據先前狀態 ( X_{t-1} ) 和狀態轉移模型 ( P(X_t|X_{t-1}) ) 預測當前狀態。</p></li><li><p><strong>更新步驟</strong><br>根據新觀測 ( Y_t ) 更新後驗概率：</p><p>[ P(X_t|Y_{1:t}) &#x3D; \frac{P(Y_t|X_t) \cdot P(X_t|Y_{1:t-1})}{P(Y_t|Y_{1:t-1})} ]</p><p>其中，證據 ( P(Y_t|Y_{1:t-1}) ) 可以通過如下公式計算：</p><p>[ P(Y_t|Y_{1:t-1}) &#x3D; \int P(Y_t|X_t) \cdot P(X_t|Y_{1:t-1}) , dX_t ]</p></li></ul><h2 id="2-3-工作流程"><a href="#2-3-工作流程" class="headerlink" title="2.3 工作流程"></a>2.3 工作流程</h2><ol><li><p><strong>初始化</strong><br>設定系統狀態的初始先驗概率，這可能基於歷史數據或專家知識。</p></li><li><p><strong>預測步驟</strong><br>使用系統模型預測下一時刻的狀態，生成預測的先驗概率。</p></li><li><p><strong>更新步驟</strong><br>當獲得新觀測數據時，計算似然函數並更新後驗概率。</p></li><li><p><strong>迭代過程</strong><br>不斷重複預測和更新步驟，以持續改進狀態估計。</p></li></ol><h2 id="2-4-優勢"><a href="#2-4-優勢" class="headerlink" title="2.4 優勢"></a>2.4 優勢</h2><ul><li><strong>處理不確定性</strong>：能夠有效整合不確定性和噪聲。</li><li><strong>適應性強</strong>：隨著新數據的到來，不斷更新狀態估計。</li><li><strong>多領域應用</strong>：適用於各種動態系統，包括信號處理、金融市場分析和自動駕駛等。</li></ul><h3 id="2-5-實際應用"><a href="#2-5-實際應用" class="headerlink" title="2.5 實際應用"></a>2.5 實際應用</h3><ul><li><strong>機器人導航</strong>：用於估計機器人的位置和運動狀態。</li><li><strong>信號處理</strong>：在噪聲環境中提取有用信號。</li><li><strong>經濟預測</strong>：分析金融數據以預測市場走勢。</li></ul><h3 id="2-6-簡單例子"><a href="#2-6-簡單例子" class="headerlink" title="2.6 簡單例子"></a>2.6 簡單例子</h3><p>假設有一個一維運動模型，我們想估計物體的位置。狀態轉移和觀測都受到噪聲影響。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模擬運動和觀測</span></span><br><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line">true_position = np.cumsum(np.random.randn(<span class="number">50</span>))  <span class="comment"># 真實位置</span></span><br><span class="line">observations = true_position + np.random.randn(<span class="number">50</span>) * <span class="number">2</span>  <span class="comment"># 觀測值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化</span></span><br><span class="line">predicted_position = [<span class="number">0</span>]</span><br><span class="line">predicted_uncertainty = [<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 參數</span></span><br><span class="line">process_variance = <span class="number">1</span>  <span class="comment"># 過程噪聲</span></span><br><span class="line">measurement_variance = <span class="number">4</span>  <span class="comment"># 觀測噪聲</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Kalman 濾波</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(observations)):</span><br><span class="line">    <span class="comment"># 預測步驟</span></span><br><span class="line">    predicted_position.append(predicted_position[i-<span class="number">1</span>])</span><br><span class="line">    predicted_uncertainty.append(predicted_uncertainty[i-<span class="number">1</span>] + process_variance)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 更新步驟</span></span><br><span class="line">    kalman_gain = predicted_uncertainty[i] / (predicted_uncertainty[i] + measurement_variance)</span><br><span class="line">    predicted_position[i] += kalman_gain * (observations[i] - predicted_position[i])</span><br><span class="line">    predicted_uncertainty[i] *= (<span class="number">1</span> - kalman_gain)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 繪圖</span></span><br><span class="line">plt.plot(true_position, label=<span class="string">&#x27;True Position&#x27;</span>)</span><br><span class="line">plt.plot(observations, label=<span class="string">&#x27;Observations&#x27;</span>, linestyle=<span class="string">&#x27;dotted&#x27;</span>)</span><br><span class="line">plt.plot(predicted_position, label=<span class="string">&#x27;Kalman Filter Prediction&#x27;</span>, linestyle=<span class="string">&#x27;dashed&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Time&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Position&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><h1 id="第三章-什麼是卡爾曼濾波"><a href="#第三章-什麼是卡爾曼濾波" class="headerlink" title="第三章 什麼是卡爾曼濾波?"></a>第三章 什麼是卡爾曼濾波?</h1><h2 id="3-1-卡爾曼濾波簡介"><a href="#3-1-卡爾曼濾波簡介" class="headerlink" title="3.1 卡爾曼濾波簡介"></a>3.1 卡爾曼濾波簡介</h2><p>卡爾曼濾波（Kalman Filter）是一種廣泛應用於動態系統中的線性最小均方誤差估計算法。它於1960年由魯道夫·E·卡爾曼提出，旨在通過對系統狀態的動態模型和測量數據進行不斷更新，來估計系統的真實狀態。卡爾曼濾波的核心思想是利用現有的信息（如系統模型和測量數據），在每個時間步長上對狀態進行預測和更新，以實現最優估計。</p><p>卡爾曼濾波廣泛應用於導航、跟蹤、信號處理和控制系統等領域。例如，在GPS導航中，它可以根據衛星信號和系統模型來估計和校正位置和速度；在跟蹤系統中，它能夠在噪聲干擾下精確估計目標的運動狀態。</p><h2 id="3-2-數學推導"><a href="#3-2-數學推導" class="headerlink" title="3.2 數學推導"></a>3.2 數學推導</h2><p>卡爾曼濾波的數學推導主要包括兩個步驟：預測步驟（Prediction Step）和更新步驟（Update Step）。</p><ol><li><strong>預測步驟</strong></li></ol><p>在這一步，根據上一狀態估計和系統模型來預測當前狀態。狀態方程和測量方程可以分別表示為：</p><p>[<br>x_{k} &#x3D; A_{k-1} x_{k-1} + B_{k-1} u_{k-1} + w_{k-1}<br>]</p><p>[<br>z_{k} &#x3D; H_{k} x_{k} + v_{k}<br>]</p><p>其中，(x_k) 是系統狀態，(u_k) 是控制輸入，(z_k) 是測量值，(A_k) 是狀態轉移矩陣，(B_k) 是控制矩陣，(H_k) 是測量矩陣，(w_k) 和 (v_k) 分別是過程噪聲和測量噪聲，通常假設它們是零均值高斯白噪聲。</p><p>根據上述模型，預測當前狀態和誤差協方差矩陣：</p><p>[<br>\hat{x}<em>{k|k-1} &#x3D; A</em>{k-1} \hat{x}<em>{k-1|k-1} + B</em>{k-1} u_{k-1}<br>]</p><p>[<br>P_{k|k-1} &#x3D; A_{k-1} P_{k-1|k-1} A_{k-1}^T + Q_{k-1}<br>]</p><p>其中，(\hat{x}<em>{k|k-1}) 是預測的狀態估計，(P</em>{k|k-1}) 是預測的誤差協方差矩陣，(Q_k) 是過程噪聲協方差矩陣。</p><ol start="2"><li><strong>更新步驟</strong></li></ol><p>在這一步，根據新的測量值來更新狀態估計和誤差協方差矩陣：</p><p>首先，計算卡爾曼增益 (K_k)：</p><p>[<br>K_{k} &#x3D; P_{k|k-1} H_{k}^T (H_{k} P_{k|k-1} H_{k}^T + R_{k})^{-1}<br>]</p><p>其中，(R_k) 是測量噪聲協方差矩陣。</p><p>然後，更新狀態估計：</p><p>[<br>\hat{x}<em>{k|k} &#x3D; \hat{x}</em>{k|k-1} + K_{k} (z_{k} - H_{k} \hat{x}_{k|k-1})<br>]</p><p>最後，更新誤差協方差矩陣：</p><p>[<br>P_{k|k} &#x3D; (I - K_{k} H_{k}) P_{k|k-1}<br>]</p><p>其中，(\hat{x}<em>{k|k}) 是更新的狀態估計，(P</em>{k|k}) 是更新的誤差協方差矩陣，(I) 是單位矩陣。</p><p>通過不斷重複這兩個步驟，卡爾曼濾波可以在動態系統中提供連續的狀態估計，並且能夠有效地抑制噪聲對估計結果的影響。</p><h1 id="第四章-什麼是粒子濾波"><a href="#第四章-什麼是粒子濾波" class="headerlink" title="第四章 什麼是粒子濾波?"></a>第四章 什麼是粒子濾波?</h1><h2 id="4-1-粒子濾波簡介"><a href="#4-1-粒子濾波簡介" class="headerlink" title="4.1 粒子濾波簡介"></a>4.1 粒子濾波簡介</h2><p>粒子濾波（Particle Filter）是一種基於蒙特卡洛方法的非線性、非高斯狀態估計技術。它也被稱為序列蒙特卡洛（Sequential Monte Carlo, SMC）方法。與卡爾曼濾波不同，粒子濾波能夠處理任意形式的狀態轉移和觀測模型，這使得它在應對複雜系統和非高斯噪聲環境下具有很強的靈活性和適應性。</p><p>粒子濾波的基本思想是使用大量的隨機樣本（即粒子）來表示狀態的概率分佈。每個粒子代表一個可能的狀態，並具有對應的權重。通過對這些粒子的狀態進行預測和更新，粒子濾波能夠逐步逼近狀態的真實概率分佈。</p><h2 id="4-2-粒子濾波的數學推導"><a href="#4-2-粒子濾波的數學推導" class="headerlink" title="4.2 粒子濾波的數學推導"></a>4.2 粒子濾波的數學推導</h2><p>粒子濾波的主要步驟包括初始化、預測、更新和重采樣：</p><ol><li><p><strong>初始化</strong></p><p> 在初始化階段，根據狀態的初始分佈生成一組粒子。每個粒子被賦予相同的初始權重。</p><p> [<br> { x_k^{(i)}, w_k^{(i)} }_{i&#x3D;1}^N<br> ]</p><p> 其中，( x_k^{(i)} ) 表示第 ( i ) 個粒子的狀態，( w_k^{(i)} ) 表示其對應的權重，( N ) 是粒子的數量。</p></li><li><p><strong>預測</strong></p><p> 在預測步驟中，根據狀態轉移模型對每個粒子的狀態進行預測。狀態轉移模型可以表示為：</p><p> [<br> x_{k+1}^{(i)} &#x3D; f(x_k^{(i)}, u_k) + v_k^{(i)}<br> ]</p><p> 其中，( f(\cdot) ) 是狀態轉移函數，( u_k ) 是控制輸入，( v_k^{(i)} ) 是過程噪聲。</p></li><li><p><strong>更新</strong></p><p> 在更新步驟中，根據觀測模型計算每個粒子的權重。觀測模型可以表示為：<br> [<br> w_{k+1}^{(i)} \propto p(z_{k+1} | x_{k+1}^{(i)})<br> ]</p><p> 其中，( p(z_{k+1} | x_{k+1}^{(i)}) ) 是觀測模型的似然函數，( z_{k+1} ) 是新的觀測值。</p></li><li><p><strong>重采樣</strong></p><p> 重采樣步驟旨在解決粒子退化問題，即隨著時間推移，少數粒子的權重會越來越大，而大部分粒子的權重會趨近於零。通過重采樣，可以從當前粒子集中抽取新的粒子，並賦予這些新粒子相等的權重，以保持粒子的多樣性。</p><p> 重采樣的過程如下：</p><p> [<br> { x_k^{(i)}, w_k^{(i)} }<em>{i&#x3D;1}^N \rightarrow { x_k^{(j)}, \frac{1}{N} }</em>{j&#x3D;1}^N<br> ]</p><p> 其中，新粒子 ( x_k^{(j)} ) 是根據當前粒子的權重進行抽樣的結果。</p></li></ol><p>通過不斷重複上述步驟，粒子濾波可以在動態系統中提供連續的狀態估計，並能夠有效地應對非線性和非高斯問題。粒子濾波在定位、導航、機器人、信號處理等領域有廣泛的應用。</p>]]></content>
       
       
       <categories>
           
-          <category> 健身日常 </category>
+          <category> 機器人算法 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 健身 </tag>
+            <tag> SLAM </tag>
             
-            <tag> 鍛煉 </tag>
+            <tag> 卡爾曼濾波 </tag>
             
-            <tag> 健康 </tag>
+            <tag> 粒子濾波 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一周五練課表之胸部訓練</title>
-      <link href="/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%83%B8%E9%83%A8%E8%A8%93%E7%B7%B4/"/>
-      <url>/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%83%B8%E9%83%A8%E8%A8%93%E7%B7%B4/</url>
-      
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
-      
-      
-      <categories>
-          
-          <category> 健身日常 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 健身 </tag>
-            
-            <tag> 鍛煉 </tag>
-            
-            <tag> 健康 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一周五練課表之臀部訓練</title>
-      <link href="/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%87%80%E9%83%A8%E8%A8%93%E7%B7%B4/"/>
-      <url>/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%87%80%E9%83%A8%E8%A8%93%E7%B7%B4/</url>
-      
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
-      
-      
-      <categories>
-          
-          <category> 健身日常 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 健身 </tag>
-            
-            <tag> 鍛煉 </tag>
-            
-            <tag> 健康 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一周五練課表之肩部訓練</title>
-      <link href="/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%82%A9%E9%83%A8%E8%A8%93%E7%B7%B4/"/>
-      <url>/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%82%A9%E9%83%A8%E8%A8%93%E7%B7%B4/</url>
-      
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
-      
-      
-      <categories>
-          
-          <category> 健身日常 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 健身 </tag>
-            
-            <tag> 鍛煉 </tag>
-            
-            <tag> 健康 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一周五練課表之背部訓練</title>
-      <link href="/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%83%8C%E9%83%A8%E8%A8%93%E7%B7%B4/"/>
-      <url>/2024/07/24/%E4%B8%80%E5%91%A8%E4%BA%94%E7%B7%B4%E8%AA%B2%E8%A1%A8%E4%B9%8B%E8%83%8C%E9%83%A8%E8%A8%93%E7%B7%B4/</url>
-      
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
-      
-      
-      <categories>
-          
-          <category> 健身日常 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 健身 </tag>
-            
-            <tag> 鍛煉 </tag>
-            
-            <tag> 健康 </tag>
+            <tag> 貝葉斯濾波 </tag>
             
         </tags>
       
